@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Happy Birthday, Aishi</title>
+<meta name="description" content="A little gift for Aishi.">
+
+<!-- Google Fonts, with safe local fallbacks defined in style.css -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Fixed starfield canvas, sits behind everything on every screen -->
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<!-- ============================= -->
+<!-- SCREEN 1 — OPENING GATE       -->
+<!-- ============================= -->
+<div id="gate" class="gate">
+  <div class="gate__inner">
+    <p class="gate__line" id="gateGreeting" data-reveal-delay="0">Hey, Aishi.</p>
+    <p class="gate__line gate__line--sub" id="gateSub" data-reveal-delay="1">I made something for you.</p>
+    <button class="gate__enter" id="enterBtn" data-reveal-delay="2">
+      <span>Enter</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============================= -->
+<!-- MAIN SITE                     -->
+<!-- ============================= -->
+<main id="site" class="site" aria-hidden="true">
+
+  <!-- SCREEN 2 — HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <h1 class="hero__title" id="heroTitle">Happy Birthday, Aishi <span class="heart">❤</span></h1>
+      <p class="hero__subtitle" id="heroSubtitle">Today is about you.</p>
+    </div>
+    <button class="scroll-cue" id="scrollCue" aria-label="Scroll down">
+      <span class="scroll-cue__line"></span>
+    </button>
+  </section>
+
+  <!-- SECTION 3 — PERSONAL MESSAGE -->
+  <section class="letter-section fade-section" id="letter-section">
+    <div class="section-inner">
+      <p class="eyebrow-quiet">For You</p>
+      <div class="letter" id="letterCard">
+        <p class="letter__text" id="letterText">[PERSONAL MESSAGE GOES HERE]</p>
+        <p class="letter__sign" id="letterSign">— always</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — OUR MEMORIES -->
+  <section class="gallery-section fade-section" id="gallery-section">
+    <div class="section-inner">
+      <p class="eyebrow-quiet">Little Moments</p>
+      <div class="gallery" id="galleryTrack">
+        <!-- photo cards injected by script.js from CONFIG.photos -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — THINGS I LIKE ABOUT YOU -->
+  <section class="likes-section fade-section" id="likes-section">
+    <div class="section-inner">
+      <p class="eyebrow-quiet">Things I Like About You</p>
+      <div class="likes-grid" id="likesGrid">
+        <!-- like cards injected by script.js from CONFIG.likes -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — TIMELINE -->
+  <section class="timeline-section fade-section" id="timeline-section">
+    <div class="section-inner">
+      <p class="eyebrow-quiet">Some Little Moments</p>
+      <div class="timeline" id="timelineTrack">
+        <!-- timeline items injected by script.js from CONFIG.timeline -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — MUSIC -->
+  <section class="music-section fade-section" id="music-section">
+    <div class="section-inner section-inner--narrow">
+      <p class="music-lead" id="musicLead">There's a song I wanted you to hear.</p>
+      <div class="player" id="player">
+        <audio id="audio" src="music/song.mp3" preload="none"></audio>
+        <button class="player__toggle" id="playToggle" aria-label="Play song">
+          <svg id="iconPlay" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="iconPause" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        </button>
+        <div class="player__body">
+          <div class="player__bar" id="progressBar">
+            <div class="player__bar-fill" id="progressFill"></div>
+          </div>
+          <div class="player__meta">
+            <span id="timeCurrent">0:00</span>
+            <span id="timeDuration">0:00</span>
+          </div>
+        </div>
+        <div class="player__volume">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M3 10v4h4l5 5V5L7 10H3z"/></svg>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7" aria-label="Volume">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — FINAL SURPRISE -->
+  <section class="final-section fade-section" id="final-section">
+    <div class="section-inner section-inner--narrow" id="finalBefore">
+      <p class="final-pre">Okay...</p>
+      <p class="final-pre final-pre--last">That's everything.</p>
+      <button class="final-btn" id="finalBtn">One Last Thing</button>
+      <button type="button" class="secret-trigger" id="secretTrigger">
+        <span id="secretTriggerLabel">there's one more thing, if you know the words</span>
+      </button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>made with a little bit of everything, for you.</p>
+  </footer>
+
+</main>
+
+<!-- FINAL REVEAL OVERLAY -->
+<div class="reveal" id="revealOverlay" aria-hidden="true">
+  <canvas id="revealStars" aria-hidden="true"></canvas>
+  <div class="reveal__content">
+    <p class="reveal__title" id="revealTitle">Happy Birthday, Aishi <span class="heart">❤</span></p>
+    <p class="reveal__message" id="revealMessage">[FINAL MESSAGE GOES HERE]</p>
+    <button class="reveal__close" id="revealClose">close</button>
+  </div>
+</div>
+
+<!-- SECRET PASSWORD PROMPT -->
+<div class="secret-modal" id="secretModal" aria-hidden="true">
+  <div class="secret-modal__box" role="dialog" aria-modal="true" aria-labelledby="secretPromptLabel">
+    <p class="secret-modal__label" id="secretPromptLabel">This one needs a password.</p>
+    <form id="secretForm" novalidate>
+      <input type="password" id="secretInput" class="secret-modal__input" placeholder="say the words" autocomplete="off" autocapitalize="off" spellcheck="false">
+      <button type="submit" class="secret-modal__submit" id="secretSubmit">Unlock</button>
+    </form>
+    <p class="secret-modal__error" id="secretError" role="alert"></p>
+    <button type="button" class="secret-modal__close" id="secretModalClose">close</button>
+  </div>
+</div>
+
+<!-- SECRET MESSAGE REVEAL -->
+<div class="secret-reveal" id="secretReveal" aria-hidden="true">
+  <div class="secret-reveal__box" role="dialog" aria-modal="true">
+    <p class="secret-reveal__message" id="secretMessage">[SECRET MESSAGE GOES HERE]</p>
+    <button type="button" class="secret-reveal__close" id="secretRevealClose">close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
