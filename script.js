@@ -13,14 +13,14 @@ const CONFIG = {
 
   // The opening screen (Screen 1)
   opening: {
-    greeting: "Hey, Aishi.",
+    greeting: "Hey, LITTLE MISS SUNSHINE.",
     subtext: "I made something for you."
   },
 
   // The hero screen right after entering (Screen 2)
   hero: {
-    title: "Happy Birthday, Aishi ❤",
-    subtitle: "Today is about you."
+    title: "Happy Birthday, SREE ❤",
+    subtitle: "Today is about you, and this little gift belong to you forever "
   },
 
   // "For You" — your personal letter to her. This can be as long as you like.
@@ -28,36 +28,74 @@ const CONFIG = {
   // of text by closing the quote, adding a comma, then use \n\n for a
   // paragraph break, e.g. "First paragraph.\n\nSecond paragraph."
   letter: {
-    text: "[PERSONAL MESSAGE GOES HERE]\n\nWrite as much as you want here. Use \\n\\n to start a new paragraph.",
+    text: "[Dear Sree,
+
+It’s actually kind of crazy when I think about how all of this started.
+
+We literally met on Facebook. Then somehow moved to Instagram, then exchanged numbers, ended up on WhatsApp, and somewhere along the way, you went from being a random person I met online to a friend, then my best friend, and eventually… a huge part of my life.
+
+And honestly, I don't think either of us planned any of that. It just happened.
+
+We've had our fair share of quarrels. Actually, “fair share” is probably an understatement. 😂 We’ve annoyed each other, misunderstood each other, gotten angry, argued over stupid things, and probably tested each other's patience more times than necessary.
+
+But somehow, after all of that, we still choose each other.
+
+And I think that's what makes what we have special to me.
+
+Because being close to someone isn't about never fighting or never getting irritated with each other. It's about having a hundred reasons to walk away and still deciding, “Nah, this idiot is staying.”
+
+You became someone I could talk to about random nonsense, serious things, stupid things, things that probably didn't even need to be said. You saw different versions of me — the confident one, the confused one, the completely stupid one, and the one who sometimes stopped believing in himself.
+
+And even when I didn't have much faith in myself, you somehow still had some left for me.
+
+I'll always be grateful for that.
+
+I don't know what the future is going to look like. Life will change, we'll change, we'll probably have more arguments because apparently that's one of our love languages 😭, and we'll probably continue annoying the hell out of each other.
+
+But I genuinely hope that through all of that, we keep choosing each other.
+
+From a random Facebook conversation to Instagram, WhatsApp, friendship, best friendship, and somehow becoming this huge part of each other's lives...
+
+I don't want this to just be a chapter.
+
+I hope it stays.
+
+For a very, very long time.
+
+Happy Birthday, Sree. ❤️
+
+And thank you for being you.
+
+— Your Mr. Diplomat]\n\nWrite as much as you want here. Use \\n\\n to start a new paragraph.",
     signature: "— always"
   },
 
   // "Little Moments" — your photo gallery. Add or remove entries freely.
   // Put your photo files inside the /images folder and match the file name.
   photos: [
-    { src: "images/photo1.jpg", caption: "That day." },
-    { src: "images/photo2.jpg", caption: "One of my favorite memories." },
+    { src: "images/photo1.jpg", caption: "The day we first met." },
+    { src: "images/photo2.jpg", caption: "Days of sharing everything." },
     { src: "images/photo3.jpg", caption: "Us being idiots." },
     { src: "images/photo4.jpg", caption: "That day." },
     { src: "images/photo5.jpg", caption: "One of my favorite memories." },
-    { src: "images/photo6.jpg", caption: "Us being idiots." }
+    { src: "images/photo6.jpg", caption: "US FOREVER." }
   ],
 
   // "Things I Like About You" — exactly 6 cards, tap to flip and reveal
   likes: [
-    "[THING I LIKE ABOUT YOU #1]",
-    "[THING I LIKE ABOUT YOU #2]",
-    "[THING I LIKE ABOUT YOU #3]",
-    "[THING I LIKE ABOUT YOU #4]",
-    "[THING I LIKE ABOUT YOU #5]",
-    "[THING I LIKE ABOUT YOU #6]"
+    "[THING I LIKE ABOUT YOU #1 Your eyes — genuinely unfair, like how am I supposed to maintain eye contact and function normally?]",
+    "[THING I LIKE ABOUT YOU #2 Your smile — stupidly cute, and somehow you always make me smile back like an idiot.]",
+    "[THING I LIKE ABOUT YOU #3 Your silly self when you're with me — probably my favourite version of you, because apparently we share one brain cell and take turns using it.]",
+    "[THING I LIKE ABOUT YOU #4 You getting irritated at my ragebaiting — honestly, one of my favourite forms of entertainment. 😂]",
+    "[THING I LIKE ABOUT YOU #5 The way you care about me — especially when I had completely lost faith in myself, you somehow still believed in me. Annoyingly wholesome, but I love you for it.]",
+    "[THING I LIKE ABOUT YOU #6 The way you are — somehow, after everything, you're still someone I know I'll always want in my life.]"
   ],
 
   // "Some Little Moments" — your timeline. Add or remove entries freely.
   timeline: [
-    { date: "Day 1", title: "The beginning", memory: "That random conversation." },
-    { date: "Somewhere in between", title: "The messy part", memory: "That stupid argument." },
-    { date: "Later", title: "The good part", memory: "That unforgettable day." }
+    { 10th December 2024: "Day 1", title: "The beginning", memory: "The day we first met" },
+    { 25th November 2025: "One Year?", title: "The messy part", memory: "We completed our first year of endless bakchodi." },
+    { FOREVER: "EVER AFTER", title: "The good part", memory: "We Will Remain Forever." }
   ],
 
   // The song section
@@ -72,19 +110,7 @@ const CONFIG = {
     preLine2: "That's everything.",
     buttonLabel: "One Last Thing",
     title: "Happy Birthday, Aishi ❤",
-    message: "[FINAL MESSAGE GOES HERE]"
-  },
-
-  // A hidden, password-locked message. Change the password and the message
-  // below. The password check ignores capitalization and extra spaces, so
-  // "Us Forever" and "us forever " both work.
-  secret: {
-    triggerLabel: "there's one more thing, if you know the words",
-    promptLabel: "This one needs a password.",
-    placeholder: "say the words",
-    password: "us forever",
-    wrongMessage: "Not quite. Try again.",
-    message: "[SECRET MESSAGE GOES HERE]"
+    message: "[Itold you before and I am saying again, does'nt matter far we go, does'nt matter what our future will be. I was, am and will always be there for you. I promised you and will keep it forever that if it's not you then no one. I don't know what will happen but all I want you to know is I love you Sree and I will forever]"
   }
 };
 
@@ -119,11 +145,6 @@ function applyConfig() {
 
   document.getElementById('revealTitle').innerHTML = withHeart(CONFIG.final.title);
   document.getElementById('revealMessage').textContent = CONFIG.final.message;
-
-  document.getElementById('secretTriggerLabel').textContent = CONFIG.secret.triggerLabel;
-  document.getElementById('secretPromptLabel').textContent = CONFIG.secret.promptLabel;
-  document.getElementById('secretInput').setAttribute('placeholder', CONFIG.secret.placeholder);
-  document.getElementById('secretMessage').textContent = CONFIG.secret.message;
 
   renderGallery();
   renderLikes();
@@ -362,82 +383,7 @@ function initFinalReveal() {
 }
 
 /* -------------------------------------------------------------------------
-   7. Secret password-locked message
-------------------------------------------------------------------------- */
-function initSecret() {
-  const trigger = document.getElementById('secretTrigger');
-  const modal = document.getElementById('secretModal');
-  const form = document.getElementById('secretForm');
-  const input = document.getElementById('secretInput');
-  const errorEl = document.getElementById('secretError');
-  const modalClose = document.getElementById('secretModalClose');
-  const reveal = document.getElementById('secretReveal');
-  const revealClose = document.getElementById('secretRevealClose');
-
-  function openModal() {
-    modal.classList.add('is-active');
-    modal.removeAttribute('aria-hidden');
-    errorEl.textContent = '';
-    input.value = '';
-    input.classList.remove('is-shaking');
-    setTimeout(() => input.focus(), 50);
-  }
-
-  function closeModal() {
-    modal.classList.remove('is-active');
-    modal.setAttribute('aria-hidden', 'true');
-  }
-
-  function openReveal() {
-    reveal.classList.add('is-active');
-    reveal.removeAttribute('aria-hidden');
-    setTimeout(() => revealClose.focus(), 50);
-  }
-
-  function closeReveal() {
-    reveal.classList.remove('is-active');
-    reveal.setAttribute('aria-hidden', 'true');
-  }
-
-  function normalize(str) {
-    return str.trim().toLowerCase().replace(/\s+/g, ' ');
-  }
-
-  function attemptUnlock(e) {
-    e.preventDefault();
-    if (normalize(input.value) === normalize(CONFIG.secret.password)) {
-      closeModal();
-      openReveal();
-    } else {
-      errorEl.textContent = CONFIG.secret.wrongMessage;
-      if (!prefersReducedMotion) {
-        input.classList.remove('is-shaking');
-        // Force reflow so the shake animation can replay on repeated wrong tries
-        void input.offsetWidth;
-        input.classList.add('is-shaking');
-      }
-      input.focus();
-      input.select();
-    }
-  }
-
-  trigger.addEventListener('click', openModal);
-  modalClose.addEventListener('click', closeModal);
-  revealClose.addEventListener('click', closeReveal);
-  form.addEventListener('submit', attemptUnlock);
-
-  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-  reveal.addEventListener('click', (e) => { if (e.target === reveal) closeReveal(); });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key !== 'Escape') return;
-    if (modal.classList.contains('is-active')) closeModal();
-    if (reveal.classList.contains('is-active')) closeReveal();
-  });
-}
-
-/* -------------------------------------------------------------------------
-   8. Starfield canvases (background + reveal overlay)
+   7. Starfield canvases (background + reveal overlay)
       Lightweight canvas particle field, pauses off-screen / hidden tab,
       and freezes into a static field when reduced motion is requested.
 ------------------------------------------------------------------------- */
@@ -534,6 +480,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollCue();
   initPlayer();
   initFinalReveal();
-  initSecret();
   initStarfields();
 });
